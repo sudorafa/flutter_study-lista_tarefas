@@ -111,6 +111,7 @@ class _HomeState extends State<Home> {
 
   Widget buildItem(BuildContext context, int index) {
     return Dismissible(
+      //Dimmisible que faz deslizar para apagar
       key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
       background: Container(
         color: Colors.red,
@@ -137,6 +138,7 @@ class _HomeState extends State<Home> {
         },
       ),
       onDismissed: (direction) {
+        //desistir da exclusao
         setState(() {
           _lastRemoved = Map.from(_toDoList[index]);
           _lastRemovedPos = index;
