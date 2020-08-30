@@ -96,6 +96,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Expanded(
+            //refresh ckama _refresh quando puxa e solta, simples de mais
             child: RefreshIndicator(
               onRefresh: _refresh,
               child: ListView.builder(
